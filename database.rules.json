@@ -1,0 +1,55 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        "projects": {
+          "$projectId": {
+            ".read": "auth != null && auth.uid === $uid",
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.hasChildren(['userId']) && newData.child('userId').val() === $uid"
+          }
+        },
+        "profile": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid"
+        },
+        "settings": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid"
+        },
+        "calculations": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid"
+        }
+      }
+    },
+    "projects": {
+      ".read": false,
+      ".write": false,
+      "$projectId": {
+        ".read": false,
+        ".write": false
+      }
+    },
+    "spaceConsidered": {
+      "$projectNumber": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+    "heatLoadSummary": {
+      "$projectNumber": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+    "inventory": {
+      "$projectNumber": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+}

@@ -1,0 +1,531 @@
+/* ===== EQUIPMENT SELECTION FORM STYLES ===== */
+
+.equipment-selection-container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.equipment-selection-form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.equipment-selection-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+/* ===== SYSTEM RECOMMENDATION SECTION ===== */
+
+.system-recommendation-section {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+  border: 2px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.system-recommendation-section h3 {
+  color: #059669;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.system-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.recommendation-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.benefits, .considerations {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.benefits h4 {
+  color: #059669;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.considerations h4 {
+  color: #d97706;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.benefits ul, .considerations ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits li, .considerations li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.benefits li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: bold;
+}
+
+.considerations li:before {
+  content: '⚠';
+  position: absolute;
+  left: 0;
+  color: #d97706;
+}
+
+.benefits li:last-child, .considerations li:last-child {
+  border-bottom: none;
+}
+
+/* ===== PROJECT TOTALS SECTION ===== */
+
+.project-totals-section {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-totals-section h3 {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.totals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.total-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.total-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: #2563eb;
+}
+
+.total-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.total-icon {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.total-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.total-value {
+  font-weight: 700;
+  color: #2563eb;
+  font-size: 1.5rem;
+}
+
+.total-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===== FLOOR EQUIPMENT SECTION ===== */
+
+.floor-equipment-section {
+  margin-bottom: 2rem;
+}
+
+.floor-equipment-section h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.floor-equipment-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.floor-equipment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+}
+
+.floor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.floor-header h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.floor-code {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.floor-summary {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ===== EQUIPMENT TABLE ===== */
+
+.equipment-table-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+}
+
+.equipment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.equipment-table thead {
+  background: linear-gradient(135deg, var(--primary-color), #5a67d8);
+  color: white;
+}
+
+.equipment-table th {
+  padding: 1rem 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+}
+
+.equipment-table th:last-child {
+  border-right: none;
+}
+
+.equipment-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  vertical-align: middle;
+}
+
+.equipment-table td:last-child {
+  border-right: none;
+}
+
+.equipment-table tbody tr:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.equipment-table tbody tr:nth-child(even) {
+  background: rgba(248, 250, 252, 0.5);
+}
+
+.room-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left !important;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.load-value {
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.calculated-value {
+  background: rgba(34, 197, 94, 0.1);
+  color: #059669;
+  font-weight: 600;
+}
+
+.equipment-table select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  background: white;
+}
+
+.equipment-table select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.equipment-table input[type="number"] {
+  width: 60px;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.equipment-table input[type="number"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+/* ===== FLOOR TOTALS ROW ===== */
+
+.floor-totals-row {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(16, 185, 129, 0.15));
+  border-top: 2px solid rgba(34, 197, 94, 0.3) !important;
+}
+
+.floor-totals-row td {
+  font-weight: 700;
+  color: #059669;
+  border-bottom: none !important;
+  padding: 1rem 0.75rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1400px) {
+  .equipment-table {
+    font-size: 0.8rem;
+  }
+  
+  .equipment-table th,
+  .equipment-table td {
+    padding: 0.5rem;
+  }
+  
+  .equipment-table select,
+  .equipment-table input {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .recommendation-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .totals-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .equipment-selection-form {
+    padding: 1rem;
+  }
+  
+  .equipment-table-container {
+    overflow-x: auto;
+  }
+  
+  .equipment-table {
+    min-width: 1200px;
+    font-size: 0.75rem;
+  }
+  
+  .floor-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .floor-summary {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .totals-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .total-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .total-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== LOADING STATE ===== */
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.system-recommendation-section,
+.project-totals-section,
+.floor-equipment-card {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.project-totals-section {
+  animation-delay: 0.1s;
+}
+
+.floor-equipment-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.floor-equipment-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.floor-equipment-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ===== EQUIPMENT TYPE SPECIFIC STYLING ===== */
+
+.equipment-table select[value*="Ceiling"] {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.1));
+}
+
+.equipment-table select[value*="Wall"] {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1));
+}
+
+.equipment-table select[value*="Floor"] {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1));
+}
+
+.equipment-table select[value*="VRF"] {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+}
+
+.equipment-table select[value*="Chiller"] {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
+}
+
+/* ===== HOVER EFFECTS ===== */
+
+.equipment-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.equipment-table tbody tr:hover .room-name {
+  color: var(--primary-color);
+  transform: translateX(2px);
+}
+
+.equipment-table tbody tr:hover .load-value {
+  transform: scale(1.05);
+}
+
+.equipment-table tbody tr:hover .calculated-value {
+  background: rgba(34, 197, 94, 0.2);
+  transform: scale(1.02);
+}

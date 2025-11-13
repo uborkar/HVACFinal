@@ -1,0 +1,535 @@
+.equipment-selection-table {
+  padding: 20px;
+  background: #f8f9fa;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-header {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header h2 {
+  margin: 0 0 8px 0;
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.table-header p {
+  margin: 0 0 16px 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.system-type-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.system-type-selector label {
+  font-weight: 600;
+  color: #475569;
+}
+
+.system-type-selector select {
+  padding: 8px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.system-type-selector select:hover {
+  border-color: #8b5cf6;
+}
+
+.system-type-selector select:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Project Summary Cards */
+.project-summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-content .label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-content .value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Equipment Table */
+.equipment-table-container {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  overflow-y: visible;
+  margin-bottom: 24px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+.equipment-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.equipment-table-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.equipment-table-container::-webkit-scrollbar-thumb {
+  background: #8b5cf6;
+  border-radius: 4px;
+}
+
+.equipment-table-container::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+.equipment-table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: auto;
+}
+
+.equipment-table thead {
+  color: white;
+}
+
+.equipment-table thead th {
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white !important;
+}
+
+.main-header th {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  padding: 16px 8px !important;
+}
+
+/* Base columns background (FLOOR, ROOM, AREA) */
+.floor-col,
+.room-col,
+.area-col {
+  background: #2c5282 !important;
+}
+
+.heat-load-section {
+  background: #7c3aed !important;
+}
+
+.heat-load-tr,
+.heat-load-cfm {
+  background: #7c3aed !important;
+}
+
+.idu-section {
+  background: #0891b2 !important;
+}
+
+.idu-type,
+.machine-capacity,
+.num-idus,
+.tonnage,
+.max-cfm {
+  background: #0891b2 !important;
+}
+
+.idu-tonnage-section {
+  background: #0891b2 !important;
+}
+
+.odu-section {
+  background: #f59e0b !important;
+}
+
+.total-cfm,
+.diversity,
+.odu-hp {
+  background: #f59e0b !important;
+}
+
+.sub-header th {
+  font-size: 11px !important;
+  padding: 10px 6px !important;
+}
+
+.third-header th {
+  font-size: 10px !important;
+  padding: 8px 4px !important;
+}
+
+
+.floor-col {
+  min-width: 100px;
+  max-width: 120px;
+}
+
+.room-col {
+  min-width: 120px;
+  max-width: 150px;
+}
+
+.area-col {
+  min-width: 70px;
+  max-width: 90px;
+}
+
+.heat-load-tr,
+.heat-load-cfm {
+  min-width: 80px;
+  max-width: 100px;
+}
+
+.idu-type {
+  min-width: 130px;
+  max-width: 160px;
+}
+
+.machine-capacity,
+.num-idus,
+.tonnage,
+.max-cfm {
+  min-width: 85px;
+  max-width: 110px;
+}
+
+.total-cfm,
+.diversity,
+.odu-hp {
+  min-width: 80px;
+  max-width: 100px;
+}
+
+.equipment-table tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.2s;
+}
+
+.equipment-table tbody tr.room-row:hover {
+  background: #f8fafc;
+}
+
+.equipment-table tbody td {
+  padding: 12px 8px;
+  text-align: center;
+  color: #475569;
+  border-right: 1px solid #e2e8f0;
+}
+
+.floor-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1e293b;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  vertical-align: middle;
+  border-right: 3px solid #8b5cf6 !important;
+  text-align: center;
+  padding-left: 16px !important;
+}
+
+.room-name {
+  font-weight: 600;
+  color: #1e293b;
+  text-align: left;
+  padding-left: 16px !important;
+}
+
+.heat-load-tr,
+.heat-load-cfm {
+  font-weight: 600;
+  color: #8b5cf6;
+}
+
+.table-select {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 12px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.table-select:hover {
+  border-color: #8b5cf6;
+}
+
+.table-select:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.table-input {
+  width: 80px;
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 12px;
+  text-align: center;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.table-input:hover {
+  border-color: #8b5cf6;
+}
+
+.table-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.heat-load-tr,
+.heat-load-cfm {
+  font-weight: 600;
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.machine-capacity,
+.num-idus,
+.tonnage,
+.max-cfm {
+  font-weight: 600;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.total-cfm,
+.diversity,
+.odu-hp {
+  font-weight: 600;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.area {
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Floor Total Row */
+.floor-total-row {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  font-weight: 700;
+  border-top: 2px solid #8b5cf6 !important;
+  border-bottom: 2px solid #8b5cf6 !important;
+}
+
+.floor-total-row td {
+  padding: 14px 8px !important;
+  color: #1e293b !important;
+}
+
+.total-label {
+  text-align: left !important;
+  padding-left: 16px !important;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.total-value {
+  font-weight: 700;
+  color: #8b5cf6 !important;
+  font-size: 14px;
+}
+
+/* Project Total Row */
+.project-total-row {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white !important;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.project-total-row td {
+  padding: 16px 8px !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.project-total-row .total-label {
+  font-size: 14px;
+  color: white !important;
+}
+
+.project-total-row .total-value {
+  color: white !important;
+  font-size: 15px;
+}
+
+/* Action Buttons */
+.table-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 24px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: #64748b;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .equipment-table-container {
+    padding: 16px;
+  }
+  
+  .equipment-table {
+    font-size: 11px;
+    min-width: 1120px;
+  }
+  
+  .equipment-table thead th {
+    padding: 10px 6px;
+    font-size: 10px;
+  }
+  
+  .equipment-table tbody td {
+    padding: 10px 6px;
+  }
+  
+  .room-col,
+  .area-col,
+  .heat-load-tr,
+  .heat-load-cfm,
+  .machine-capacity,
+  .num-idus,
+  .tonnage,
+  .max-cfm,
+  .total-cfm,
+  .diversity,
+  .odu-hp {
+    min-width: 80px;
+  }
+  
+  .idu-type {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .table-actions {
+    flex-direction: column;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

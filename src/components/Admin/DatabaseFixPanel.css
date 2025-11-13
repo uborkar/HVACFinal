@@ -1,0 +1,265 @@
+.database-fix-panel {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.panel-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.panel-header h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.panel-header p {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-box,
+.warning-box {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.info-box {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.warning-box {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+.info-box h3,
+.warning-box h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.info-box ul,
+.warning-box ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-type: none;
+}
+
+.info-box li,
+.warning-box li {
+  margin-bottom: 0.5rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.info-box li::before {
+  content: '✓ ';
+  color: #3b82f6;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.warning-box li::before {
+  content: '• ';
+  color: #f59e0b;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.info-box code,
+.warning-box code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.action-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.fix-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.fix-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.fix-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.results-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.results-section h3,
+.results-section h4 {
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+}
+
+.results-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-stat {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-stat.success {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.result-stat.error {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.result-stat.success .stat-value {
+  color: #10b981;
+}
+
+.result-stat.error .stat-value {
+  color: #ef4444;
+}
+
+.results-details {
+  margin-top: 1.5rem;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  border-left: 3px solid;
+}
+
+.result-item.success {
+  border-color: #10b981;
+}
+
+.result-item.error {
+  border-color: #ef4444;
+}
+
+.result-icon {
+  font-size: 1.2rem;
+}
+
+.result-project {
+  font-weight: 600;
+  color: #1f2937;
+  flex: 1;
+}
+
+.result-error {
+  font-size: 0.9rem;
+  color: #ef4444;
+  font-style: italic;
+}
+
+.next-steps {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #eff6ff;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+}
+
+.next-steps h4 {
+  margin: 0 0 0.75rem 0;
+  color: #1f2937;
+}
+
+.next-steps ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.next-steps li {
+  margin-bottom: 0.5rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .database-fix-panel {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .panel-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .results-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .fix-button {
+    width: 100%;
+    padding: 1rem;
+  }
+}

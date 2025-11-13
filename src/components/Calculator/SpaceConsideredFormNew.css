@@ -1,0 +1,633 @@
+/* Excel-like HVAC Calculator Styling */
+.space-form-excel {
+  background: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section */
+.excel-header {
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-info-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  gap: 8px;
+  padding: 4px 8px;
+  background: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.info-value {
+  color: #0066cc;
+  flex: 1;
+}
+
+/* Excel Section */
+.excel-section {
+  margin-bottom: 30px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  color: #495057;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 16px;
+  margin: 0;
+  border-bottom: 1px solid #c0c0c0;
+  border-radius: 4px 4px 0 0;
+}
+
+.subsection-title {
+  background: #f8f9fa;
+  color: #495057;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Excel Table */
+.excel-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  background: white;
+}
+
+.excel-table th {
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  color: #333;
+  font-weight: 600;
+  padding: 8px 6px;
+  border: 1px solid #c0c0c0;
+  text-align: center;
+  font-size: 10px;
+}
+
+.excel-table td {
+  padding: 6px;
+  border: 1px solid #d0d0d0;
+  text-align: center;
+  background: white;
+}
+
+.excel-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.excel-table tr:hover {
+  background: #f0f8ff;
+}
+
+/* Excel Input */
+.excel-input {
+  width: 100%;
+  border: 1px solid #c0c0c0;
+  padding: 4px 6px;
+  font-size: 11px;
+  background: white;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.excel-input:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 1px #0078d4;
+}
+
+.excel-input.calculated {
+  background: #f0f8ff;
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.excel-input:read-only {
+  background: #f5f5f5;
+  color: #666;
+}
+
+/* Row Labels */
+.row-label {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.highlight-row {
+  background: #fff3cd;
+  font-weight: 600;
+}
+
+.highlight-row td {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Totals Row */
+.totals-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border-top: 2px solid #c0c0c0;
+  font-weight: 600;
+}
+
+.totals-row.highlight {
+  background: #e3f2fd;
+  color: #1976d2;
+  font-size: 12px;
+}
+
+.totals-row.grand-total {
+  background: #fff3e0;
+  color: #f57c00;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.total-label {
+  flex: 1;
+}
+
+.total-value {
+  font-weight: 700;
+  color: #0066cc;
+}
+
+/* Output Table */
+.output-table {
+  background: #f8f9fa;
+}
+
+.output-table td {
+  padding: 12px;
+  border: 2px solid #c0c0c0;
+}
+
+.output-label {
+  background: #e9ecef;
+  font-weight: 600;
+  color: #495057;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.output-value {
+  background: white;
+  font-weight: 700;
+  color: #0066cc;
+  font-size: 14px;
+}
+
+/* Form Actions */
+.form-actions-excel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #c0c0c0;
+  margin-top: 20px;
+}
+
+.btn-back, .btn-save {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+.btn-back {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-back:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.btn-save {
+  background: #28a745;
+  color: white;
+}
+
+.btn-save:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .space-form-excel {
+    padding: 15px;
+  }
+  
+  .excel-table {
+    font-size: 10px;
+  }
+  
+  .excel-input {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+  
+  .excel-table th,
+  .excel-table td {
+    padding: 6px 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .space-form-excel {
+    padding: 10px;
+    font-size: 10px;
+  }
+  
+  .project-info-bar {
+    grid-template-columns: 1fr;
+  }
+  
+  .excel-table {
+    font-size: 9px;
+  }
+  
+  .form-actions-excel {
+    flex-direction: column;
+  }
+  
+  .btn-back,
+  .btn-save {
+    width: 100%;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .space-form-excel {
+    font-size: 9px;
+  }
+  
+  .form-actions-excel {
+    display: none;
+  }
+  
+  .excel-section {
+    break-inside: avoid;
+  }
+}
+
+/* Multi-Room Interface Styles */
+.floor-navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.floor-tab {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.floor-tab:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.floor-tab.active {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.floor-tab.completed {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.floor-tab-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.floor-code {
+  background: #3b82f6;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.floor-tab.completed .floor-code {
+  background: #10b981;
+}
+
+.floor-name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.floor-progress {
+  margin-top: 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  transition: width 0.3s ease;
+}
+
+.floor-tab.completed .progress-fill {
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.current-floor-section {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.floor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.floor-header h4 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.3rem;
+}
+
+.floor-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.add-room-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-room-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.floor-totals {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.room-selection-section {
+  margin-bottom: 24px;
+}
+
+.room-selection-section h4 {
+  margin: 0 0 16px 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.room-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.room-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.room-card.selected {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.room-card.calculated {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.room-card.pending {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.room-name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.remove-room-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.remove-room-btn:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+.room-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.room-area, .room-type, .room-occupancy {
+  color: #64748b;
+}
+
+.room-status {
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.calculated-status, .pending-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.calculated-status {
+  color: #10b981;
+}
+
+.pending-status {
+  color: #f59e0b;
+}
+
+.status-icon {
+  font-size: 1.1rem;
+}
+
+.load-value {
+  background: #10b981;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.room-calculation-section {
+  margin-top: 24px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.building-summary-section {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.building-summary-section h3 {
+  margin: 0 0 20px 0;
+  color: #1e293b;
+  font-size: 1.3rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.summary-label {
+  font-weight: 500;
+  color: #64748b;
+}
+
+.summary-value {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
